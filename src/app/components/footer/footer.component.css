@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1E2B34; /* Color de fondo */
+    color: #E7EEF2; /* Color del texto */
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #FF8201; /* Color de los enlaces */
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #FF5000; /* Color de los enlaces al pasar el ratón */
+}
