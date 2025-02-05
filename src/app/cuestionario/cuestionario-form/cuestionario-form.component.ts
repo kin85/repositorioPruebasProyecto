@@ -1,11 +1,25 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { BbddService } from '../../services/BBDD.service';
 
 @Component({
   selector: 'app-cuestionario-form',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './cuestionario-form.component.html',
-  styleUrl: './cuestionario-form.component.css'
+  styleUrls: ['./cuestionario-form.component.css']
 })
-export class CuestionarioFormComponent {
+export class CuestionarioFormComponent implements OnInit {
 
+  public cuestionario: any;
+  public preguntas: any[] = [];
+
+  constructor(private bbddService: BbddService) {}
+
+  ngOnInit() {
+    const id = 1; 
+    this.bbddService.getCuestionarioById(id).subscribe(data => {
+      this.cuestionario = data;
+      this.preguntas = data.preguntas;
+    });
+  }
 }

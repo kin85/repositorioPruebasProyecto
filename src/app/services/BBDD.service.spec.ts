@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { BbddService } from './bbdd.service';
+import { BbddService } from './BBDD.service';
 
 describe('BbddService', () => {
   let service: BbddService;
